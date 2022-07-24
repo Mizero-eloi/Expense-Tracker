@@ -1,13 +1,22 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
+import Balance from "./components/Balance";
+import Header from "./components/Header";
+import IncomeExpense from "./components/IncomeExpense";
+import TransactionList from "./components/TransactionList";
+import { GlobalProvider } from "./context/GlobalState";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <h1>Hello world!</h1>
+      <GlobalProvider>
+        <Header />
+        <Balance />
+        <IncomeExpense />
+        <TransactionList />
+      </GlobalProvider>
     </div>
   );
 }
