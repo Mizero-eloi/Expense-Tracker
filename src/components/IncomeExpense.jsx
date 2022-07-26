@@ -18,8 +18,8 @@ function moneyFormatter(num) {
 }
 
 function IncomeExpense(props) {
-  const { transactios } = useContext(GlobalContext);
-  const { amounts } = transactions.map((transaction) => transaction.amount);
+  const { transactions } = useContext(GlobalContext);
+  const amounts = transactions.map((transaction) => transaction.amount);
 
   const income = amounts
     .filter((item) => item > 0)

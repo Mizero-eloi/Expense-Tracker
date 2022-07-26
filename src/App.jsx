@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import IncomeExpense from "./components/IncomeExpense";
 import TransactionList from "./components/TransactionList";
 import { GlobalProvider } from "./context/GlobalState";
+import AddTransaction from "./components/AddTransaction";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,10 +13,13 @@ function App() {
   return (
     <div className="App">
       <GlobalProvider>
-        <Header />
-        <Balance />
-        <IncomeExpense />
-        <TransactionList />
+        <div className="container">
+          <Header />
+          <Balance />
+          <IncomeExpense />
+          <TransactionList />
+          <AddTransaction />
+        </div>
       </GlobalProvider>
     </div>
   );

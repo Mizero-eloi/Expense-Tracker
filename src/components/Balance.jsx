@@ -21,8 +21,10 @@ function Balance(props) {
   const { transactions } = useContext(GlobalContext);
   const amounts = transactions.map((transaction) => transaction.amount);
   const total = amounts.reduce((acc, item) => {
-    acc + item;
+    return acc + item;
   }, 0);
+
+  console.log("total: " + total);
 
   return (
     <div>
